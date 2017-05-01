@@ -1,11 +1,3 @@
-<h1><% @baker.name %></h1>
-
-<ul>
-  <% @bakers.each do |baker| %>
-    <li>
-      <a href="/bakers/<%= baker.id %>">
-       <img src="<%= baker.img_url %>"/>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<h1><%= @recipe.name %></h1>
+ <h2><%= @recipe.ingredients %></h2>
+ <h2><%= @recipe.instructions %></h2>
