@@ -1,0 +1,11 @@
+<h1><% @baker.name %></h1>
+
+<ul>
+  <% @bakers.each do |baker| %>
+    <li>
+      <a href="/bakers/<%= baker.id %>">
+       <img src="<%= baker.img_url %>"/>
+      </a>
+    </li>
+  <% end %>
+</ul>
