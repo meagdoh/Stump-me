@@ -1,0 +1,11 @@
+<h1>Choose your Baker</h1>
+
+<ul>
+  <% @bakers.each do |baker| %>
+    <li>
+      <a href="/bakers/<%= baker.id %>">
+        <%= baker.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
