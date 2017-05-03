@@ -1,0 +1,7 @@
+<h1>Choose your Baker</h1>
+
+  <% @bakers.each do |baker| %>
+      <a href="/bakers/<%= baker.id %>">
+       <img src="<%= baker.img_url %>"class="bakerHeadshot"/>
+      </a>
+  <% end %>

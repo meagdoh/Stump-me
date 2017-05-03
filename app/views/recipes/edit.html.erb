@@ -1,12 +1,15 @@
-<%= form_for [@baker, @recipe] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="form">
+  <h1>Edit "<%=@recipe.name%>"</h1>
+    <%= form_for [@baker, @recipe] do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
 
-  <%= f.label :ingredients %>
-  <%= f.text_field :ingredients %>
+      <%= f.label :ingredients %>
+      <%= f.text_field :ingredients %>
 
-  <%= f.label :instructions %>
-  <%= f.text_field :instructions %>
+      <%= f.label :instructions %>
+      <%= f.text_field :instructions %>
 
-  <%= f.submit "Edit" %>
-<% end %>
+      <%= f.submit "Edit" %>
+    <% end %>
+</div>

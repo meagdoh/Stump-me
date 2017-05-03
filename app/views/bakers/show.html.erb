@@ -1,0 +1,17 @@
+<div class="bakerCard">
+   <img src="<%= @baker.img_url %>"class="bakerCardHeadshot"/>
+
+<h1>Recipes <%=link_to "+", new_baker_recipe_path(@baker) %></h1>
+  <ul>
+    <% @baker.recipes.each do |recipe| %>
+      <h2>
+        <li>
+          <a href="/bakers/<%=@baker.id %>/recipes/<%= recipe.id %>" class="recipeLink">
+          <%= "#{recipe.name}" %>
+          </a>
+        </li>
+      </h2>
+
+    <% end %>
+  </ul>
+</div>
