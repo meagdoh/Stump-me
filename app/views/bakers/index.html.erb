@@ -1,7 +1,17 @@
-<h1>Choose your Baker</h1>
-
-  <% @bakers.each do |baker| %>
-      <a href="/bakers/<%= baker.id %>">
-       <img src="<%= baker.img_url %>"class="bakerHeadshot"/>
-      </a>
-  <% end %>
+<header></header>
+<div class="container">
+    <main class="content">
+        <h1>Choose A Baker</h1>
+        <h2>To find recipes.</h2>
+        <div class="bakercontainer">
+            <% @bakers.each do |baker| %>
+            <a href="/bakers/<%= baker.id %>">
+                <img src="<%= baker.img_url %>" class="headshot"/>
+            </a>
+            <% end %>
+        </div>
+    </main>
+    <nav></nav>
+    <aside></aside>
+</div>
+<footer></footer>

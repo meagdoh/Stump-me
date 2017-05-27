@@ -1,23 +1,98 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-/* assets/stylesheets */
-/* Choose Your Master B: */
+body {
+    border: black 2px solid;
+    padding: 3%;;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    height: 600px;
+}
+
+main {
+    flex: 1;
+    padding-left: 4%;
+}
+
+nav, aside {
+    flex: 0 0 12em;
+}
+
+nav {
+    order: -1;
+}
+
+.headshot {
+    width: 31%;
+    height: 15%;
+}
+
+header, footer {
+    height: 100px;
+}
+
 h1{
   font-family: AvenirNext-Bold;
-  font-size: 100.22px;
+  font-size: 60.22px;
+  color: #4A4A4A;
+}
+
+h2{
+  font-family: AvenirNext-Regular;
+  font-weight: 300;
+  font-size: 48px;
+  color: #8C8C8C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*h1{
+  font-family: AvenirNext-Bold;
+  font-size: 80.22px;
   color: #4A4A4A;
 }
 
@@ -92,4 +167,4 @@ input[type=submit]  {
     font-size: 36px;
     text-align: center;
     margin-top: 10px;
-}
+}*/
