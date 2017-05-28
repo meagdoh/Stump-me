@@ -30,15 +30,12 @@ nav {
     order: -1;
 }
 
-.thumbnailHeadshot {
-    width: 31%;
-    height: 15%;
-}
 
 header, footer {
     height: 100px;
 }
 
+*/
 h1{
   font-family: AvenirNext-Bold;
   font-size: 60.22px;
@@ -50,19 +47,27 @@ h2{
   font-weight: 300;
   font-size: 48px;
   color: #8C8C8C;
-}*/
+}
+
+.thumbnailHeadshot {
+    width: 31%;
+    height: 15%;
+}
+
+.content{
+  margin-left: 4%;
+}
+
 
 /*show.html.erb CSS*/
 
 body {
-    border: black 2px solid;
     padding: 3%;
 }
 
 .header {
     display: flex;
     flex-direction: column;
-    background-color: red;
 }
 
 .container {
@@ -81,7 +86,7 @@ body {
   height: 100%;
 }
 
-.content {
+.showContent {
     flex: 1;
     margin-left: 24%;
 }
@@ -99,7 +104,7 @@ nav {
     height: 15%;
 }
 
-header, footer {
+.showheader, .showfooter {
     height: 100px;
 }
 
@@ -162,18 +167,57 @@ input[type=submit]  {
     max-width: 20%;
     max-height: 10%;
     font-family: AvenirNext-Regular;
-    font-size: 36px;
+    font-size: 24px;
     text-align: center;
     margin-top: 10px;
 }
 
 
+.button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 24px;
+    max-width: 10%;
+    max-height: 5%;
+    font-family: AvenirNext-Regular;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 3%;
+}
 
 
+.recipeCard {
+  margin: 3%;
+  font-family: AvenirNext-Bold;
+  font-size: 60.22px;
+  color: #4A4A4A;
+}
 
 
+h5{
+  font-family: AvenirNext-Bold;
+  font-weight: 300;
+  font-size: 32px;
+  color: #4A4A4A;
+    margin: 2px;
+}
 
+h6{
+  font-family: AvenirNext-Regular;
+  font-weight: 300;
+  font-size: 24px;
+  color: #4A4A4A;
+  margin: 25px;
 
+}
+
+/*CSS for recipe/new*/
+label{
+  font-family: AvenirNext-Regular;
+  font-size: 28px;
+}
 
 
 
@@ -209,10 +253,7 @@ h2{
 }
 
 
-h3, label{
-  font-family: AvenirNext-Regular;
-  font-size: 36px;
-}
+
 
 .bakerHeadshot{
    border: 2px solid;
@@ -223,18 +264,6 @@ h3, label{
 
  }
 
- .button {
-     background-color: white;
-     color: black;
-     border: 2px solid black;
-     padding: 10px 24px;
-     max-width: 10%;
-     max-height: 5%;
-     font-family: AvenirNext-Regular;
-     font-size: 36px;
-     text-align: center;
-     margin: 1%;
- }
 
  .recipeCard, .bakerCard {
    max-width: 50%;
