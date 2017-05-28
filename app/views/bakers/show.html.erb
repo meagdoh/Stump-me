@@ -1,4 +1,39 @@
 <div class="bakerCard">
+
+</div>
+
+
+<header></header>
+<div class="container">
+    <main class="content">
+        <div class="profilecontainer">
+          <img src="<%= @baker.img_url %>"class="profileHeadshot"/>
+            <div class="recipeContainer">
+              <h3>Recipes <%=link_to "+", new_baker_recipe_path(@baker) %></h3>
+              <div class="recipeList">
+
+                <ul>
+                  <% @baker.recipes.each do |recipe| %>
+                  <h4>
+                      <a href="/bakers/<%=@baker.id %>/recipes/<%= recipe.id %>" class="recipeLink">
+                        <%= "#{recipe.name}" %>
+                      </a>
+                  </h4>
+                  <% end %>
+                </ul>
+
+
+              </div>
+            </div>
+        </div>
+    </main>
+    <nav></nav>
+    <aside></aside>
+</div>
+<footer></footer>
+
+<!-- V.01 -->
+<!-- <div class="bakerCard">
    <img src="<%= @baker.img_url %>"class="bakerCardHeadshot"/>
 
 <h1>Recipes <%=link_to "+", new_baker_recipe_path(@baker) %></h1>
@@ -14,4 +49,4 @@
 
     <% end %>
   </ul>
-</div>
+</div> -->

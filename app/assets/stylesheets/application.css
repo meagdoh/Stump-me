@@ -1,4 +1,6 @@
-body {
+
+/*index.html.erb CSS*/
+/*body {
     border: black 2px solid;
     padding: 3%;;
 }
@@ -28,7 +30,7 @@ nav {
     order: -1;
 }
 
-.headshot {
+.thumbnailHeadshot {
     width: 31%;
     height: 15%;
 }
@@ -48,18 +50,122 @@ h2{
   font-weight: 300;
   font-size: 48px;
   color: #8C8C8C;
+}*/
+
+/*show.html.erb CSS*/
+
+body {
+    border: black 2px solid;
+    padding: 3%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    height: 600px;
+}
+
+.profilecontainer {
+    display: flex;
+    height: 325px;
+    flex-wrap: wrap;
+}
+
+.profileHeadshot{
+  height: 100%;
+}
+
+.content {
+    flex: 1;
+    margin-left: 24%;
+}
+
+nav, aside {
+    flex: 0 0 1em;
+}
+
+nav {
+    order: -1;
+}
+
+.headshot {
+    width: 31%;
+    height: 15%;
+}
+
+header, footer {
+    height: 100px;
+}
+
+
+h3{
+  font-family: AvenirNext-Bold;
+  font-weight: 300;
+  font-size: 32px;
+  color: #4A4A4A;
+  margin: 0%;
+      margin-left: 3%;
+      padding-top: 3%;
+}
+
+h4{
+  font-family: AvenirNext-Regular;
+  font-weight: 300;
+  font-size: 24px;
+  color: #4A4A4A;
+  margin: 0%;
+  padding-top: 3%;
+
+}
+
+.recipeDescription{
+  font-family: AvenirNext-Regular;
+  font-size: 18px;
+  color: #4A4A4A;
+  margin-left: 10%;
+}
+
+.recipeContainer{
+  width: 600px;
+}
+
+ul, .recipeDescription{
+  padding: 0;
+margin: 0;
+}
+
+.recipeList{
+      margin-left: 3%;
 }
 
 
 
+/*recipe specific CSS*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 
-
-
-
-
-
-
-
+input[type=submit]  {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 24px;
+    max-width: 20%;
+    max-height: 10%;
+    font-family: AvenirNext-Regular;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 10px;
+}
 
 
 
@@ -145,26 +251,8 @@ h3, label{
   vertical-align: middle;
 }
 
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
+
 
 .form{
   margin: 20%;
 }
-
-input[type=submit]  {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    padding: 10px 24px;
-    max-width: 20%;
-    max-height: 10%;
-    font-family: AvenirNext-Regular;
-    font-size: 36px;
-    text-align: center;
-    margin-top: 10px;
-}*/
