@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 	end
 	def create
 		@topic = Topic.find(params[:topic_id])
-		@post = @topic.posts.create(post_params)
+		@post = @topic.current_user.posts.create(post_params)
 		redirect_to topic_post_path(@topic, @post)
 	end
 	def edit
