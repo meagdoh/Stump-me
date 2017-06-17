@@ -1,8 +1,0 @@
-<div class="recipeCard"><h1><%= @recipe.name %></h1>
-  <h5>Ingredients</h5>
-    <h6><%= @recipe.ingredients %></h6>    
-  <h5>Instructions</h5>
-     <h6><%= @recipe.instructions %></h6>
-  <div class="button"> <%=link_to "Edit", edit_baker_recipe_path %></div>
-  <div class="button"><%=link_to "Delete", baker_recipe_path(@baker, @recipe), method: :delete %></div>
-</div>

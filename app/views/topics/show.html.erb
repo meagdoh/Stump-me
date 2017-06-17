@@ -1,0 +1,50 @@
+<div class="topicCard">
+
+</div>
+
+
+<header class="showHeader"></header>
+<div class="container">
+    <main class="showContent">
+        <div class="profilecontainer">
+          <img src="<%= @topic.img_url %>"class="profileHeadshot"/>
+            <div class="recipeContainer">
+              <h3>Posts <%=link_to "+", new_topic_post_path(@topic) %></h3>
+              <div class="postList">
+
+                <ul>
+                  <% @topic.posts.each do |post| %>
+                  <h4>
+                      <a href="/topics/<%=@topic.id %>/posts/<%= post.id %>" class="postLink">
+                        <%= "#{post.name}" %>
+                      </a>
+                  </h4>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </main>
+    <nav></nav>
+    <aside></aside>
+</div>
+<footer class="showFooter"></footer>
+
+<!-- V.01 -->
+<!-- <div class="topicCard">
+   <img src="<%= @topic.img_url %>"class="topicCardHeadshot"/>
+
+<h1>Posts <%=link_to "+", new_topic_post_path(@topic) %></h1>
+  <ul>
+    <% @topic.posts.each do |post| %>
+      <h2>
+        <li>
+          <a href="/topics/<%=@topic.id %>/posts/<%= post.id %>" class="postLink">
+          <%= "#{post.name}" %>
+          </a>
+        </li>
+      </h2>
+
+    <% end %>
+  </ul>
+</div> -->
