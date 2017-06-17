@@ -16,7 +16,7 @@
                   <% @topics.posts.each do |post| %>
                   <h4>
                       <a href="/topics/<%=@topics.id %>/posts/<%= post.id %>" class="postLink">
-                        <%= "#{post.name}" %>
+                        <%= "#{post.title}" %>
                       </a>
                   </h4>
                   <% end %>

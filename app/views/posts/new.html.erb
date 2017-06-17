@@ -1,6 +1,6 @@
 
 <div class="form">
-	<h1>Create New Recipe for <%=@topic.name%></h1>
+	<h1>Create New Post for <%=@topic.subject_name%></h1>
 	<%= form_for [@topic, @post] do |f| %>
 		  <%= f.label :name %>
 		  <%= f.text_field :name %>

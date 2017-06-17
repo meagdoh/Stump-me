@@ -10,28 +10,30 @@ Post.destroy_all
 
 # create your "parent" objects as usual
 
-marie = Topic.create(name:"Marie", img_url:"http://www.pbs.org/food/wp-content/blogs.dir/2/files/2016/06/GBBS-Bio-Marie.jpg", bio: "Marie and her husband Colin can finally live the good life after retiring 6 years ago from working for the ministry of defence, living round the world and running BnB’s. Today Marie spends her days playing golf, attending Zumba classes, helping at local charity fundraisers and baking. Her children and grandchildren now live in England, but she regularly visits and the first thing she does is get the eggs and flour out and make the kids ‘proper’ packed lunches.")
-tamal = Topic.create(name:"Tamal", img_url: "http://www.pbs.org/food/wp-content/blogs.dir/2/files/2016/06/GBBS-Bio-Tamal.jpg", bio: "Tamal grew up wanting to be a vet but as he got to age 16, realised he was scared of animals and decided to become a doctor as human’s are less likely to bite him. He qualified as a doctor five years ago and after working at a hospital in Brighton, made the move to Manchester to work in anaesthetics.")
-marie2 = Topic.create(name:"Marie", img_url:"http://www.pbs.org/food/wp-content/blogs.dir/2/files/2016/06/GBBS-Bio-Marie.jpg", bio: "Marie and her husband Colin can finally live the good life after retiring 6 years ago from working for the ministry of defence, living round the world and running BnB’s. Today Marie spends her days playing golf, attending Zumba classes, helping at local charity fundraisers and baking. Her children and grandchildren now live in England, but she regularly visits and the first thing she does is get the eggs and flour out and make the kids ‘proper’ packed lunches.")
-tamal2 = Topic.create(name:"Tamal", img_url: "http://www.pbs.org/food/wp-content/blogs.dir/2/files/2016/06/GBBS-Bio-Tamal.jpg", bio: "Tamal grew up wanting to be a vet but as he got to age 16, realised he was scared of animals and decided to become a doctor as human’s are less likely to bite him. He qualified as a doctor five years ago and after working at a hospital in Brighton, made the move to Manchester to work in anaesthetics.")
-marie3 = Topic.create(name:"Marie", img_url:"http://www.pbs.org/food/wp-content/blogs.dir/2/files/2016/06/GBBS-Bio-Marie.jpg", bio: "Marie and her husband Colin can finally live the good life after retiring 6 years ago from working for the ministry of defence, living round the world and running BnB’s. Today Marie spends her days playing golf, attending Zumba classes, helping at local charity fundraisers and baking. Her children and grandchildren now live in England, but she regularly visits and the first thing she does is get the eggs and flour out and make the kids ‘proper’ packed lunches.")
-tamal3 = Topic.create(name:"Tamal", img_url: "http://www.pbs.org/food/wp-content/blogs.dir/2/files/2016/06/GBBS-Bio-Tamal.jpg", bio: "Tamal grew up wanting to be a vet but as he got to age 16, realised he was scared of animals and decided to become a doctor as human’s are less likely to bite him. He qualified as a doctor five years ago and after working at a hospital in Brighton, made the move to Manchester to work in anaesthetics.")
+energy = Topic.create(subject_name:"Energy & the Environment", img_url:"https://moulton.house.gov/wp-content/uploads/2014/08/iStock_000022100234Small_0-e1439312264426-150x150.jpg")
+fishing = Topic.create(subject_name:"Fishing", img_url:"https://moulton.house.gov/wp-content/uploads/2015/08/iStock_000046942574Small-150x150.jpg")
+healthcare = Topic.create(subject_name:"Healthcare", img_url:"https://moulton.house.gov/wp-content/uploads/2014/08/iStock_000022593710Small-150x150.jpg")
 
 
 # now that the parent exists in the DB
 # we can call '.create' on the relation
-marie.posts.create([
-    {name: "Mocha and Tutti Frutti Cream Horns",
-      ingredients: "150g (5½oz) strong white bread flour, chilled, plus extra for dusting",
-      instructions: "Flatten the butter into a rectangle, about 16x7½in, by hitting it with a rolling pin (you may find it easier if you sandwich the butter between 2 sheets of cling film). Return to the fridge for an hour to harden the butter again.",
-      category: "puff pastry"
+energy.posts.create([
+    {title: "LEAD Team Announce $300,000 in Brownfields Grants",
+      text: "'This grant is yet another testament to the strength of the LEAD team,” said Congressman Seth Moulton. “These sites, saddled by years of oil and chemical contamination, are an albatross around the neck of Lynn, and pose a serious threat to the city’s environmental and economic health. Brownfields funds help transform dirty, dormant properties into new businesses and homes, stimulating much needed jobs and tax revenue for Lynn. I look forward to continued partnership with the LEAD team as we continue to invest in our community and our future.'",
+      source: "https://cfpub.epa.gov/bf_factsheets/gfs/index.cfm?xpg_id=9554&display_type=HTML"
     }
     ])
 
-tamal.posts.create([
-    {name: "Mocha and Tutti Frutti Cream Horns",
-      ingredients: "150g (5½oz) strong white bread flour, chilled, plus extra for dusting",
-      instructions: "Flatten the butter into a rectangle, about 16x7½in, by hitting it with a rolling pin (you may find it easier if you sandwich the butter between 2 sheets of cling film). Return to the fridge for an hour to harden the butter again.",
-      category: "puff pastry"
+fishing.posts.create([
+    {title: "Young Fishermen's Development Act of 2017",
+      text: "The tenets of the legislation, which is modeled after a similar and successful program run by the Department of Agriculture, include training, education and outreach to attract younger fishermen to the waterfront to help reverse the trend of an aging industry.",
+      source: "http://www.gloucestertimes.com/news/national_world_news/moulton-bill-looks-to-inject-youth-into-fishing-industry/article_3e4b7469-9b15-563a-91df-028175804577.html"
     }
     ])
+
+healthcare.posts.create([
+  {title: "Young Fishermen's Development Act of 2017",
+    text: "The tenets of the legislation, which is modeled after a similar and successful program run by the Department of Agriculture, include training, education and outreach to attract younger fishermen to the waterfront to help reverse the trend of an aging industry.",
+    source: "http://www.sethmoulton.com/health_care"
+  }
+  ])

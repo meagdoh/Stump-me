@@ -16,10 +16,9 @@ ActiveRecord::Schema.define(version: 20170617181417) do
   enable_extension "plpgsql"
 
   create_table "posts", force: :cascade do |t|
-    t.string  "name"
-    t.string  "ingredients"
-    t.string  "instructions"
-    t.string  "category"
+    t.string  "title"
+    t.string  "text"
+    t.string  "source"
     t.integer "topic_id"
     t.integer "user_id"
     t.index ["topic_id"], name: "index_posts_on_topic_id", using: :btree
@@ -27,9 +26,8 @@ ActiveRecord::Schema.define(version: 20170617181417) do
   end
 
   create_table "topics", force: :cascade do |t|
-    t.string "name"
+    t.string "subject_name"
     t.string "img_url"
-    t.string "bio"
   end
 
   create_table "users", force: :cascade do |t|
