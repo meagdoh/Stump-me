@@ -9,8 +9,8 @@ class PostsController < ApplicationController
 	end
 	def create
 		@topic = Topic.find(params[:topic_id])
-		@post = @topic.current_user.posts.create(post_params)
-		redirect_to topic_post_path(@topic, @post)
+		@post = @topic.posts.create(post_params.merge(user:current_user))
+		redirect_to topic_path(@topic)
 	end
 	def edit
 		@topic = Topic.find(params[:topic_id])
@@ -20,8 +20,8 @@ class PostsController < ApplicationController
 	def update
 		@topic = Topic.find(params[:topic_id])
 		@post = Post.find(params[:id])
-		@post.update(post_params)
-		redirect_to topic_post_path(@topic, @post)
+		@post.update(post_params.merge(user:current_user))
+		redirect_to topic_path(@topic)
 	end
 	def destroy
 		@topic = Topic.find(params[:topic_id])
@@ -32,6 +32,6 @@ class PostsController < ApplicationController
 
 private
 def post_params
-  params.require(:post).permit(:name, :ingredients, :instructions)
+  params.require(:post).permit(:title, :text, :source)
 end
 end
