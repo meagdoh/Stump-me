@@ -1,40 +1,9 @@
-<header></header>
-<div class="container">
-    <main class="content">
-        <h1>Choose A Baker</h1>
-        <h2>To find posts.</h2>
-        <div class="topiccontainer">
-            <% @topics.each do |topic| %>
-            <a href="/topics/<%= topic.id %>">
-                <img src="<%= topic.img_url %>" class="thumbnailHeadshot"/>
-            </a>
-            <% end %>
-        </div>
-    </main>
-    <nav></nav>
-    <aside></aside>
-</div>
-<footer></footer>
-
-
-<!-- Index Layout -->
-<!-- <body>
-    <header></header>
-    <div class="container">
-        <main class="content">
-            <h1>Choose A Baker</h1>
-            <h2>To find posts.</h2>
-            <div class="topiccontainer">
-                <img src="/assets/images/GBBS-Bio-Flora.jpg" alt="" class="headshot">
-                <img src="/assets/images/GBBS-Bio-Marie.jpg" alt="" class="headshot">
-                <img src="/assets/images/GBBS-Bio-Mat.jpg" alt="" class="headshot">
-                <img src="/assets/images/GBBS-Bio-Nadiya.jpg" alt="" class="headshot">
-                <img src="/assets/images/GBBS-Bio-Stuart.jpg" alt="" class="headshot">
-                <img src="/assets/images/GBBS-Bio-Tamal.jpg" alt="" class="headshot">
-            </div>
-        </main>
-        <nav></nav>
-        <aside></aside>
-    </div>
-    <footer></footer>
-</body> -->
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+  <% @topics.each do |topic| %>
+    <a href="/topics/<%= topic.id %>" class="thumbnail">
+      <img src="<%= topic.img_url %>" alt="<%= topic.subject_name %>">
+      <%= topic.subject_name %>
+    </a>
+      <% end %>
+  </div>
