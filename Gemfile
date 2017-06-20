@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+gem 'rails_12factor'
+#CSS
 ruby '2.4.0'
 # User Authentication
 gem 'devise'
