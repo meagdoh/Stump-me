@@ -1,48 +1,90 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Emergency Talking Points</title>
+        <title>Stump.me - Talking points in your pocket.</title>
         <%= csrf_meta_tags %>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-      <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Talk Feed</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Stump.me</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
 
-
-      <% if !current_user %>
-      <li><%= link_to "Sign Up", new_user_registration_path, class: "glyphicon glyphicon-user" %></li>
-      <li><%= link_to "Sign In", new_user_session_path, class: "glyphicon glyphicon-log-in" %></li>
-      <% else %>
-      <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
-      <%= current_user.email %>
-      <% end %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </ul>
-  </div>
-</nav>
+                            <li>
+                                <a href="#">View All</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="#">Budget</a>
+                            </li>
+                            <li>
+                                <a href="#">Education</a>
+                            </li>
+                            <li>
+                                <a href="#">Energy</a>
+                            </li>
+                            <li>
+                                <a href="#">Equality</a>
+                            </li>
+                            <li>
+                                <a href="#">Foreign Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Gun Violence Protection</a>
+                            </li>
+                            <li>
+                                <a href="#">Housing</a>
+                            </li>
+                            <li>
+                                <a href="#">Immigration</a>
+                            </li>
+                            <li>
+                                <a href="#">Jobs</a>
+                            </li>
+                            <li>
+                                <a href="#">Opioid Epidemic</a>
+                            </li>
+                            <li>
+                                <a href="#">Seniors</a>
+                            </li>
+                            <li>
+                                <a href="#">Transportation</a>
+                            </li>
+                            <li>
+                                <a href="#">Veterans</a>
+                            </li>
+                            <li>
+                                <a href="#">Women's Rights</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <% if !current_user %>
+                    <li><%= link_to "Sign Up", new_user_registration_path, class: "glyphicon glyphicon-user" %></li>
+                    <li><%= link_to "Sign In", new_user_session_path, class: "glyphicon glyphicon-log-in" %></li>
+                <% else %>
+                    <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+                    <%= current_user.email %>
+                    <% end %>
+                    <p class="notice"><%= notice %></p>
+                    <p class="alert"><%= alert %></p>
+                </ul>
+            </div>
+        </nav>
 
         <div id="main-container" class="container">
             <div class="row">
