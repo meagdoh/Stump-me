@@ -1,7 +1,7 @@
 <div class="issues-container">
   <% @topics.each do |topic| %>
+      <div class="thumbnail" style ="background: url('<%= topic.img_url %>');background-size: cover;" alt="<%= topic.subject_name %>">
         <a href="/topics/<%= topic.id %>" class="subject-name">
-          <div class="thumbnail" style ="background: url('<%= topic.img_url %>') no-repeat" alt="<%= topic.subject_name %>" >
           <%= topic.subject_name %>
       </div>
     </a>
