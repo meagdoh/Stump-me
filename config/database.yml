@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: tgbbo_recipe_generator_development
+  database: talking_points
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

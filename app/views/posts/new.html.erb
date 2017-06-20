@@ -1,0 +1,16 @@
+
+<div class="form">
+	<h1>Create New Post for <%=@topic.subject_name%></h1>
+	<%= form_for [@topic, @post] do |f| %>
+		  <%= f.label :title %>
+		  <%= f.text_field :title %>
+
+		  <%= f.label :text %>
+		  <%= f.text_field :text %>
+
+		  <%= f.label :source %>
+		  <%= f.text_field :source %>
+
+			<%= f.submit %>
+	<% end %>
+</div>

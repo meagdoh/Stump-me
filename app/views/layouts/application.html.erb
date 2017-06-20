@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TgbboRecipeGenerator</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-    <%= yield %>
-  </body>
+    <head>
+        <title>Stump.me - Talking points in your pocket.</title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Karla|Nunito" rel="stylesheet">
+    </head>
+    <div class="container">
+        <div class="nav-container">
+          <div class="nav-left">
+            <a href="/" class='home-link'>Stump.me</a>
+            <h2>Pocket-sized talking points <br>for your next stump speech</h2>
+          </div>
+            <ul class="nav-right">
+                <% if !current_user %>
+                <li><%= link_to "Sign Up", new_user_registration_path, class: "glyphicon glyphicon-user" %></li>
+                <li><%= link_to "Sign In", new_user_session_path, class: "glyphicon glyphicon-log-in" %></li>
+            <% else %>
+                <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+                <%= current_user.email %>
+                <% end %>
+                <p class="notice"><%= notice %></p>
+                <p class="alert"><%= alert %></p>
+            </ul>
+        </div>
+        <%= yield %>
+    </div>
 </html>

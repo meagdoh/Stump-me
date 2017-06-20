@@ -1,0 +1,8 @@
+<div class="postCard"><h1><%= @post.title %></h1>
+  <h5>Summary</h5>
+    <h6><%= @post.text %></h6>
+  <h5>Source</h5>
+     <h6><a href="<%= @post.source %>"</a><%= @post.source %></h6>
+  <div class="button"> <%=link_to "Edit", edit_topic_post_path %></div>
+  <div class="button"><%=link_to "Delete", topic_post_path(@topic, @post), method: :delete %></div>
+</div>

@@ -1,0 +1,11 @@
+<div class="topic-container">
+    <h3><%=@topics.subject_name %> &nbsp; <span class="add-link"><%=link_to "+", new_topic_post_path(@topics) %></span></h3>
+    <img src="<%= @topics.img_url %>"/>
+            <ul>
+                <% @topics.posts.each do |post| %>
+                    <a href="/topics/<%=@topics.id %>/posts/<%= post.id %>" class="postLink">
+                        <%= "#{post.title}" %>
+                    </a>
+                <% end %>
+            </ul>
+</div>
