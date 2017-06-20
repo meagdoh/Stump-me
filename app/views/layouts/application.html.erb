@@ -6,10 +6,15 @@
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Karla|Nunito" rel="stylesheet">
     </head>
     <div class="container">
-        <div class="item item-1">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="nav-container">
+          <div class="nav-left">
+            Stump.me
+            <h2>Pocket-sized talking points <br>for your next stump speech</h2>
+          </div>
+            <ul class="nav-right">
                 <% if !current_user %>
                 <li><%= link_to "Sign Up", new_user_registration_path, class: "glyphicon glyphicon-user" %></li>
                 <li><%= link_to "Sign In", new_user_session_path, class: "glyphicon glyphicon-log-in" %></li>

@@ -1,13 +1,61 @@
-.topic-container {
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #BDEAF0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  height: 250px;
+}
+
+.nav-left{
+  padding: 40px;
+    font-size: 60px;
+}
+
+.nav-right{
+  padding: 50px;
+}
+
+body{
+  font-family: 'Karla', sans-serif;
+  background-color: #F4F3F2;
+}
+
+h2{
+  font-family: 'Karla', sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  text-transform: lowercase;
+
+}
+
+h3{
+  font-family: 'Karla', sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+}
+
+.add-link{
+  text-decoration: none;
+}
+
+.issues-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    padding: 100px;
-    margin: 100px;
-    margin-left: 500px;
-    margin-right: 500px;
+    padding: 10px;
+    margin: 50px;
+    margin-left: 600px;
+    margin-right: 600px;
 }
 
+.topic-container {
+    padding: 10px;
+    margin: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
 .thumbnail {
     display: flex;
     background-size: cover;
@@ -15,13 +63,14 @@
     width: 200px;
     flex-flow: row wrap;
     margin: 10px;
-    opacity: 0.8;
     align-items: center;
     justify-content: center;
+    opacity: .7;
 }
 
 .subject-name {
-  font-size: 18px;
-  position: relative;
+  font-size: 24px;
   text-decoration: none;
+  color: black;
+  background-color: #F4F3F2;
 }

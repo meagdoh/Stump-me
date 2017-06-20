@@ -1,31 +1,12 @@
-<div class="topicCard">
-
-</div>
-
-
-<header class="showHeader"></header>
-<div class="container">
-    <main class="showContent">
-        <div class="profilecontainer">
-          <img src="<%= @topics.img_url %>"class="profileHeadshot"/>
-            <div class="recipeContainer">
-              <h3>Posts <%=link_to "+", new_topic_post_path(@topics) %></h3>
-              <div class="postList">
-
-                <ul>
-                  <% @topics.posts.each do |post| %>
-                  <h4>
-                      <a href="/topics/<%=@topics.id %>/posts/<%= post.id %>" class="postLink">
+<div class="topic-container">
+    <h3><%=@topics.subject_name %> &nbsp; <span class="add-link"><%=link_to "+", new_topic_post_path(@topics) %></span></h3>
+    <img src="<%= @topics.img_url %>"/>
+            <ul>
+                <% @topics.posts.each do |post| %>
+                    <a href="/topics/<%=@topics.id %>/posts/<%= post.id %>" class="postLink">
                         <%= "#{post.title}" %>
-                      </a>
-                  </h4>
-                  <% end %>
-                </ul>
-              </div>
-            </div>
-        </div>
-    </main>
-    <nav></nav>
-    <aside></aside>
+                    </a>
+                <% end %>
+            </ul>
 </div>
 <footer class="showFooter"></footer>

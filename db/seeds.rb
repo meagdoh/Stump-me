@@ -11,7 +11,7 @@ Post.destroy_all
 # create your "parent" objects as usual
 
 energy = Topic.create(
-  subject_name:"Energy & the Environment",
+  subject_name:"Environment",
   img_url:"https://moulton.house.gov/wp-content/uploads/2014/08/iStock_000022100234Small_0-e1439312264426-150x150.jpg")
 fishing = Topic.create(
   subject_name:"Fishing",
@@ -32,7 +32,7 @@ foreign_policy = Topic.create(
   subject_name:"Foreign Policy",
   img_url:"https://moulton.house.gov/wp-content/uploads/2014/08/150325-Ashraf-Ghani-150x150.jpg")
 gun_violence = Topic.create(
-  subject_name:"Gun Violence Protection",
+  subject_name:"Gun Violence",
   img_url:"https://moulton.house.gov/wp-content/uploads/2016/06/IMG_6723.jpg")
 housing = Topic.create(
   subject_name:"Housing",
@@ -41,7 +41,7 @@ immigration = Topic.create(
   subject_name:"Immigration",
   img_url:"https://moulton.house.gov/wp-content/uploads/2014/08/iStock_000009439890_XXXLarge-150x150.jpg")
 jobs = Topic.create(
-  subject_name:"Jobs and the Economy",
+  subject_name:"Jobs",
   img_url:"https://moulton.house.gov/wp-content/uploads/2015/08/Jobs-EconomySmall-e1439309830885-150x150.jpg")
 opioid_epidemic = Topic.create(
   subject_name:"Opioid Epidemic",
@@ -50,7 +50,7 @@ seniors = Topic.create(
   subject_name:"Seniors",
   img_url:"https://moulton.house.gov/wp-content/uploads/2015/08/SeniorsSmall-150x150.jpg")
 transportation = Topic.create(
-  subject_name:"Transportation and Infrastructure",
+  subject_name:"T&I",
   img_url:"https://moulton.house.gov/wp-content/uploads/2016/08/IMG_0900.jpg")
 veterans = Topic.create(
   subject_name:"Veterans",
