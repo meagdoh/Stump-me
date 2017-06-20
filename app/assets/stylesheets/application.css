@@ -1,0 +1,27 @@
+.topic-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 100px;
+    margin: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.thumbnail {
+    display: flex;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    flex-flow: row wrap;
+    margin: 10px;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+}
+
+.subject-name {
+  font-size: 18px;
+  position: relative;
+  text-decoration: none;
+}

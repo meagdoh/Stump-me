@@ -1,9 +1,9 @@
-<div class="row">
-  <div class="col-xs-6 col-md-3">
+<div class="topic-container">
   <% @topics.each do |topic| %>
-    <a href="/topics/<%= topic.id %>" class="thumbnail">
-      <img src="<%= topic.img_url %>" alt="<%= topic.subject_name %>">
-      <%= topic.subject_name %>
+      <div class='thumbnail' style ="background-image:url(<%= topic.img_url %>)" alt="<%= topic.subject_name %>">
+        <a href="/topics/<%= topic.id %>" class="subject-name">
+          <%= topic.subject_name %>
+      </div>
     </a>
       <% end %>
-  </div>
+</div>
